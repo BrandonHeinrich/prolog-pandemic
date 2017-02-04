@@ -2,6 +2,6 @@
 :- use_module(library(lists)).
 
 test(reverse) :-
-        reverse([a,b], [a,a]).
+        reverse([a,b], [b,a]).
 
 :- end_tests(lists).

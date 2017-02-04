@@ -1,1 +1,2 @@
-:- consult(test).
+:- consult(test_test).
+:- consult(counters).
