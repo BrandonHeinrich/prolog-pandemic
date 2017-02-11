@@ -5,6 +5,7 @@
 
 :- http_handler(root(.), http_redirect(moved, root(lobby)), []).
 :- http_handler(root(games), handle_games, []).
+:- http_handler(root(games/_), handle_games, []).
 
 :- use_module(game).
 
@@ -26,5 +27,9 @@ handle_games(Request) :-
         game_command(new_game, ID),
         format('Content-type: application/json~n~n'),
         format('{id:~a}', [ID]).
+        
+handle_game(Request) :-
+        format('Content-type: application/json~n~n'),
+        format('{id:~a}', [8989]).
         
         
